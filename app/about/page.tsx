@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Dimas from "../images/foto-dimas.jpg";
+import { useRouter } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -22,8 +23,11 @@ import {
   TimelineBody,
   Typography,
 } from "@material-tailwind/react";
+import TentangSaya from "../components/TentangSaya";
 
 const About = () => {
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -233,166 +237,9 @@ const About = () => {
       {/* Tentang Saya */}
       <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-          <svg
-            className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-            width={404}
-            height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={784}
-              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-            />
-          </svg>
-
-          <div className="relative mt-6 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-            <div className="relative">
-              <h3 className="text-[24px] font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-                Dimas Halim Hartanto
-              </h3>
-              <p className="mt-3 text-lg text-gray-500">
-                Hallo, Selamat datang di portofolio saya! Saya Dimas Halim
-                Hartanto, seorang profesional berusia 27 tahun yang bergerak
-                dalam dunia pengembangan web dan desain UI/UX. Dengan pengalaman
-                yang kuat dalam bidang ini, saya telah menghasilkan beberapa
-                aplikasi yang informatif dan berguna untuk kebutuhan user.
-              </p>
-
-              <dl className="mt-14 space-y-10">
-                <h3 className="text-[24px] font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-                  Pengalaman Bekerja
-                </h3>
-                <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                  <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                      February 2022
-                    </time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      Application UI code in Tailwind CSS
-                    </h3>
-                    <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                      Get access to over 20+ pages including a dashboard layout,
-                      charts, kanban board, calendar, and pre-order E-commerce &
-                      Marketing pages.
-                    </p>
-                    <a
-                      href="#"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                    >
-                      Learn more{" "}
-                      <svg
-                        className="w-3 h-3 ms-2 rtl:rotate-180"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                      March 2022
-                    </time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      Marketing UI design in Figma
-                    </h3>
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      All of the pages and components are first designed in
-                      Figma and we keep a parity between the two versions even
-                      as we update the project.
-                    </p>
-                  </li>
-                  <li className="ms-4">
-                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                      April 2022
-                    </time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      E-Commerce UI code in Tailwind CSS
-                    </h3>
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Get started with dozens of web components and interactive
-                      elements built on top of Tailwind CSS.
-                    </p>
-                  </li>
-                </ol>
-              </dl>
-            </div>
-
-            <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-              <svg
-                className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-                width={784}
-                height={404}
-                fill="none"
-                viewBox="0 0 784 404"
-              >
-                <defs>
-                  <pattern
-                    id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                    x={0}
-                    y={0}
-                    width={20}
-                    height={20}
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x={0}
-                      y={0}
-                      width={4}
-                      height={4}
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  width={784}
-                  height={404}
-                  fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-                />
-              </svg>
-              <Image
-                className="relative mx-auto rounded-[20px] shadow-sm"
-                width={340}
-                height={340}
-                src={Dimas}
-                alt="Dimas Halim"
-              />
-            </div>
-          </div>
+          {/* Tentang saya */}
+          <TentangSaya />
+          {/* Akhir tentang saya */}
 
           <svg
             className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
@@ -430,12 +277,10 @@ const About = () => {
         </div>
       </div>
       {/* CTA */}
-      <div className="bg-gradient-to-r from-[#164e63] from-20% via-[#d4d4d8] to-[#d4d4d8]">
+      <div className="bg-[#164e63]">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-            <span className="block text-white">
-              Start your free trial today.
-            </span>
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-5xl uppercase">
+            <span className="block text-white">Project yang dikerjakan</span>
           </h2>
         </div>
       </div>
@@ -472,12 +317,6 @@ const About = () => {
               Most of our products are limited releases that won't come back.
               Get your favorite items while they're in stock.
             </p>
-            <a
-              href="#"
-              className="mt-6 inline-block w-full bg-gray-900 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-gray-800 sm:w-auto"
-            >
-              Get access to our one-time sale
-            </a>
           </div>
         </section>
 
@@ -502,7 +341,7 @@ const About = () => {
                       </div>
                       <div className="relative mt-4">
                         <h3 className="text-sm font-bold text-gray-900">
-                          Project 1
+                          Ampaba Development
                         </h3>
                       </div>
                       <div className="absolute top-0 inset-x-0 h-72 rounded-lg p-4 flex items-end justify-end overflow-hidden">
@@ -511,12 +350,15 @@ const About = () => {
                           className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
                         />
                         <p className="relative text-lg font-semibold text-white">
-                          Project Test 1
+                          Ampaba
                         </p>
                       </div>
                     </div>
                     <div className="mt-6">
-                      <button className="relative flex bg-[#164e63] rounded-md py-2 px-8 items-center justify-center text-sm font-bold text-white hover:bg-red-600">
+                      <button
+                        onClick={() => router.push("/ampaba")}
+                        className="relative flex bg-[#164e63] rounded-md py-2 px-8 items-center justify-center text-sm font-bold text-white hover:bg-red-600"
+                      >
                         View detail
                         <span className="sr-only">, test product</span>
                       </button>
@@ -658,7 +500,7 @@ const About = () => {
         </section>
       </div>
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-[#164e63] from-20% via-[#d4d4d8] to-[#d4d4d8]">
+      <footer className="bg-[#164e63]">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item) => (
